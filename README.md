@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-06-11 15:32:29
+ * @LastEditTime: 2023-06-11 16:57:45
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -49,3 +49,9 @@ A Linux Board(F1C200S, RP2040 Inside)
 3.**工程款**：火力全开开发应用，在**基础款外壳**的基础上，增加USB-A*2，4个按钮触发杆（分别是F1C200S复位按钮，F1C200S用户按钮，RP2040 Boot按钮，RP2040复位按钮），50P FPC扩展板固定孔（50P包含电源，RP2040的所有GPIO，F1C200S的部分核心外设IO）将赋予更多可能性（比如点个屏（B站小电视），点个摄像头（跑一下NCNN），etc…）。    
 
 总之，生命不息，折腾不止！🐛
+
+2023/06/11： 完成基础款外壳绘制
+
+![基础版正面1](/img/Front_Board_Basic_Shell_1.jpeg)
+![基础版正面2](/img/Front_Board_Basic_Shell_2.jpg)
+![基础版正面3](/img/Front_Board_Basic_Shell_3.jpg)
