@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-06-20 15:14:15
+ * @LastEditTime: 2023-06-20 16:12:22
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -27,12 +27,12 @@ A Linux Board (F1C200S, RP2040 Inside)
 ### 1.1 硬件
 
 #### 1.1.1 核心板PCB
-1. PCB尺寸:`49mm*49mm`，板厚1.6mm
-2. PCB层数:`4层`
-3. 电源线宽度`10mil`，信号线宽度`6mil`
+1. PCB尺寸:`49mm*49mm`，板厚`1.6mm`。
+2. PCB层数:`4层`。
+3. 电源线宽度`10mil`，信号线宽度`6mil`。
 4. **WIFI天线50Ω阻抗匹配**: 下单时选用嘉立创`JLC0461H-7628`层压结构，经过计算，天线走线宽度为`13.75mil`。
-5. 最小孔径/外径选择: 下单时选用嘉立创`0.25mm(外径0.35/0.4)`
-6. 大量封装采用0402，手焊推荐开钢网(节省成本可开小钢片)
+5. 最小孔径/外径选择: 下单时选用嘉立创`0.25mm(外径0.35/0.4)`。
+6. 大量封装采用0402，手焊推荐开钢网(节省成本可开小钢片)。
 
 #### 1.1.2 扩展板PCB
 
@@ -45,7 +45,22 @@ A Linux Board (F1C200S, RP2040 Inside)
 
 
 
+### 1.2 软件
 
+在软件章节开始前，想说明本项目的RAM&Flash资源情况如下:
+|     | F1C200S  | RP2040  |
+|  ----  | ---- | ---- |
+| RAM  | 64MB | 264KB |
+| Flash  | 取决于SD卡容量(典型值32GB) | 16MB |
+
+
+#### 1.2.1 U-Boot
+
+#### 1.2.2 Tina Linux
+
+#### 1.2.3 Linux主线
+
+#### 
 
 
 
