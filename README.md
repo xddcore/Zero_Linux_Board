@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-06-20 15:11:23
+ * @LastEditTime: 2023-06-20 15:14:15
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -15,7 +15,7 @@ A Linux Board (F1C200S, RP2040 Inside)
 本项目是xddcore同学在2023年6月2日启动的一个Linux开发板项目。本项目旨在纪念学生时代的结束(从初二至今9年的电子编程折腾生涯)。同时，设计一块板子来满足一些需要Linux生态但是又不需要很强性能的场景。
 
 ## 特性
-1. **紧凑的设计**。PCB尺寸`49mm*49mm*1.6mm`，带壳尺寸`59mm*59mm*24mm`。
+1. **紧凑的设计**。PCB尺寸`49mm*49mm*1.6mm`，带壳尺寸`59mm*59mm*27mm`。
 2. **差不多性能**。内置全志F1C200S(`ARM9@400Mhz+`)和RP2040(`双Cortex M0+处理器核心，最高133MHz`)。
 3. **方便的开发方式**。仅一个Type-C接口可完成对F1C200S和RP2040的开发。另外还可通过F1C200S直接对RP2040进行编程。
 4. **充分的外设**。`USB Hub(USB2.0*2)`，`2.4 GHz WIFI`，`3W扬声器`，`锂电池充放电管理`，`MPU6050`等。
@@ -39,7 +39,7 @@ A Linux Board (F1C200S, RP2040 Inside)
 (待补充)
 
 #### 1.1.3 其他硬件
-1. 4 \*（M2螺丝+M2防滑螺母）。螺丝长度**需大于**`30mm`。
+1. 4 \*（M2螺丝+M2防滑螺母）。螺丝长度**需大于**`27mm`。
 2. 锂电池尺寸**需小于**`50mm*50mm*8mm`，锂电池接口为`XH2.54`。
 3. F1C200S散热片尺寸**需小于**`10mm*10mm*12mm`。
 
