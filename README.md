@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-07-19 15:47:48
+ * @LastEditTime: 2023-07-19 15:50:42
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -33,7 +33,7 @@
   * [复现指南](#-复现指南)
     + [1.1 硬件](#11---)
       - [1.1.1 核心板PCB](#111-核心板PCB)
-      - [1.1.2 扩展板PCB](#112-扩展板PCB)
+      - [1.1.2 扩展板PCB](#112扩展板PCB)
       - [1.1.3 外壳](#113-外壳)
       - [1.1.4 其他硬件](#114-其他硬件)
       - [1.1.5 Type-C拨码开关配置](#115-Type-C拨码开关配置)
@@ -43,7 +43,7 @@
       - [1.2.3 U-Boot](#123-u-boot)
       - [1.2.4 Linux主线(5.10.186)](#124-Linux主线(5.10.186))
       - [1.2.5 使用Buildroot创建一个简易的rootfs来调试内核](#125-使用Buildroot创建一个简易的rootfs来调试内核)
-      - [1.2.6 使用debian来作为rootfs(apt install很舒服)](#126-使用debian来作为rootfs(apt install很舒服))
+      - [1.2.6 使用debian来作为rootfs(apt install很舒服)](#126-使用debian来作为rootfs/(apt install很舒服))
       - [1.2.7 debian-番外篇](#127-debian-番外篇)
     + [1.3 驱动开发](#13-驱动开发)
       - [1.3.1 Linux音频](#131-Linux音频)
