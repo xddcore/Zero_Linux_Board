@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-07-19 15:43:44
+ * @LastEditTime: 2023-07-19 15:45:26
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -52,7 +52,7 @@
       - [1.3.4 2.8寸ISP电容触摸屏驱动➕LVGL](#134-28-isp--------lvgl)
       - [1.3.5 树莓派RP2040 USB驱动](#135----rp2040-usb--)
       - [1.3.6 语音识别与交互驱动](#136----------)
-  * [1.4 一些图片](##1.4一些图片)
+  * [1.4 一些图片](#14-一些图片)
 
 
 
