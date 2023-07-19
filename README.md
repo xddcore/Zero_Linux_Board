@@ -1279,5 +1279,5 @@ Bug fixed:
 ![board1](/img/board1.JPG)
 ![board2](/img/board2.jpeg)
 ![board3](/img/board3.jpeg)
-![board4](/img/board4.jpg)
-![board5](/img/board5.jpg)
+![board4](/img/board4.JPG)
+![board5](/img/board5.JPG)
