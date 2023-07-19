@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-07-19 17:02:18
+ * @LastEditTime: 2023-07-19 17:06:07
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -12,7 +12,7 @@
 >如果你喜欢此项目，欢迎为本项目点一个Star🌟
 
 **视频介绍-1**：[【自制】圆梦Linux小电脑](https://www.bilibili.com/video/BV1nN411S7BC)
-**视频介绍-2**：[等待发布](#)
+**视频介绍-2**：[【开源】](#)
 
 ## 介绍
 本项目是xddcore同学在2023年6月2日启动的一个Linux开发板项目。本项目旨在纪念学生时代的结束(从初二至今9年的电子编程折腾生涯)。同时，设计一块板子来满足一些需要Linux生态但是又不需要很强性能的场景。
@@ -103,10 +103,14 @@ xddcore zero linux board（仅开发板，不含sd卡，外壳，扩展板）
 | 桌面机器人扩展板  | 已绘制完成，等待测试 | [稚晖君ElectronBot桌面机器人的Linux版本](https://github.com/xddcore/ElectronBot-Linux)|
 
 #### 1.1.3 外壳
-平衡美观和实用，预计推出三种外壳形式（得益于n\*2mm亚克力外壳方案带来Z轴方向的积木特性）：    
+
+##### 亚克力外壳
+平衡美观和实用，预计推出两种亚克力外壳形式（得益于n\*2mm亚克力外壳方案带来Z轴方向的积木特性）：    
 1. **透明探索款**：收藏陈列。全封闭外壳，避免进灰，搭配上蓝色阻焊层&1u沉金&JLC高清丝印，主打一个精致和帅。    
 2. **基础款**：一般开发应用。Type-C&TF Card接口，内部含电池槽&扬声器槽，主控散热片支持&顶板散热孔。    
-3. **工程款**：火力全开开发应用，在**基础款外壳**的基础上，增加USB-A*2，4个按钮触发杆（分别是F1C200S复位按钮，F1C200S用户按钮，RP2040 Boot按钮，RP2040复位按钮），50P FPC扩展板固定孔（50P包含电源，RP2040的所有GPIO，F1C200S的部分核心外设IO）将赋予更多可能性（比如点个屏（B站小电视），点个摄像头（跑一下NCNN），etc…）。 
+##### 3D打印外壳
+1. 小电视外壳:内带2.8寸ISP电容触摸屏，麦克风，iphone扬声器等，可玩性极高。
+
 
 #### 1.1.4 其他硬件
 1. 4 \*（M2螺丝+M2防滑螺母）。螺丝长度**需大于**`27mm`，M2防滑螺母厚度2.8mm。
