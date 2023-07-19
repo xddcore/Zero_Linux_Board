@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-07-19 17:06:07
+ * @LastEditTime: 2023-07-19 21:54:11
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -11,8 +11,9 @@
 
 >如果你喜欢此项目，欢迎为本项目点一个Star🌟
 
-**视频介绍-1**：[【自制】圆梦Linux小电脑](https://www.bilibili.com/video/BV1nN411S7BC)
-**视频介绍-2**：[【开源】](#)
+**视频介绍**：[【自制】圆梦Linux小电脑](https://www.bilibili.com/video/BV1nN411S7BC)
+
+**开源仓库介绍**：[【自制|开源】小白也可以轻松复现的Linux小电脑](https://www.bilibili.com/video/BV17u411V7ws/)
 
 ## 介绍
 本项目是xddcore同学在2023年6月2日启动的一个Linux开发板项目。本项目旨在纪念学生时代的结束(从初二至今9年的电子编程折腾生涯)。同时，设计一块板子来满足一些需要Linux生态但是又不需要很强性能的场景。
