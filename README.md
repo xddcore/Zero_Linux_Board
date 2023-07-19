@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-07-19 17:00:04
+ * @LastEditTime: 2023-07-19 17:02:18
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -160,6 +160,9 @@ xddcore zero linux board（仅开发板，不含sd卡，外壳，扩展板）
 |   镜像名称  | 下载链接  | 
 |  ----  | ---- | 
 | xddcore_zero_debian_v5.10.186_230715.img.gz  |  [点我查看](https://github.com/xddcore/Zero_Linux_Board/releases/tag/Debian_v5.10.186_230715) |
+
+开发板工具包路径(相关软件会放置在里面)：
+> /xddcore_toolbox
 
 #### 1.2.3 U-Boot
 
