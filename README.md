@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-07-20 10:26:27
+ * @LastEditTime: 2023-07-20 10:27:37
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -110,14 +110,14 @@ xddcore zero linux board（仅开发板，不含sd卡，外壳，扩展板）
 1. **透明探索款**：收藏陈列。全封闭外壳，避免进灰，搭配上蓝色阻焊层&1u沉金&JLC高清丝印，主打一个精致和帅。    
 2. **基础款**：一般开发应用。Type-C&TF Card接口，内部含电池槽&扬声器槽，主控散热片支持&顶板散热孔。    
 
-关于亚克力外壳组装的说明(**非常重要**):
-在首次亚克力外壳设计中，采用了12块2mm厚度的亚克力。经过实际组装测试，亚克力高度缺少`2.8mm`,为了成功的组装采用如下方法修补:
+关于亚克力外壳组装的说明(**非常重要**):    
+在首次亚克力外壳设计中，采用了12块2mm厚度的亚克力。经过实际组装测试，亚克力高度缺少`2.8mm`,为了成功的组装采用如下方法修补:    
 
->方法一: 使用4颗2.8mm高度的M2防滑螺母垫高处理(M2防滑螺母安装在由下往上数的**第4块**亚克力上方)。效果图如下:
+>方法一: 使用4颗2.8mm高度的M2防滑螺母垫高处理(M2防滑螺母安装在由下往上数的**第4块**亚克力上方)。效果图如下:    
 ![U-Boot](/img/Acrylic_assemble_fixup1.jpeg)
 
 
->方法二: 在生产亚克力时，多生产一块3mm厚度的亚克力。最后共计生产**12块2mm厚度亚克力和1块3mm厚度亚克力**。
+>方法二: 在生产亚克力时，多生产一块3mm厚度的亚克力。最后共计生产**12块2mm厚度亚克力和1块3mm厚度亚克力**。    
 **12块2mm厚度亚克力dwg生产文件**:[点我下载生产文件](https://github.com/xddcore/Zero_Linux_Board/blob/main/1.Hardware/1.1Zero_Linux_Board/SHELL_BASIC/Shell-basic_2D.dwg)     
 **1块3mm厚度亚克力dwg生产文件**:[点我下载生产文件](https://github.com/xddcore/Zero_Linux_Board/blob/main/1.Hardware/1.1Zero_Linux_Board/SHELL_BASIC/Shell-basic_2D_3mm.dwg)
 
@@ -241,10 +241,12 @@ git clone https://github.com/xddcore/linux.git -b zero-v6.1.36
 git clone https://github.com/xddcore/linux.git -b zero-v5.10.186-codec
 ```
 在此我们使用`v5.10.186内核`进行接下来的开发。
+
 2. 拉取内核配置
 ```
 make ARCH=arm xddcore_zero_defconfig 
 ```
+
 3. 编译内核
 ```
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- -j4
