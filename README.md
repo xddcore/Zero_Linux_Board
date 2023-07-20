@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-07-20 10:36:43
+ * @LastEditTime: 2023-07-20 13:11:03
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -110,6 +110,8 @@ xddcore zero linux board（仅开发板，不含sd卡，外壳，扩展板）
 平衡美观和实用，预计推出两种亚克力外壳形式（得益于n\*2mm亚克力外壳方案带来Z轴方向的积木特性）：    
 1. **透明探索款**：收藏陈列。全封闭外壳，避免进灰，搭配上蓝色阻焊层&1u沉金&JLC高清丝印，主打一个精致和帅。    
 2. **基础款**：一般开发应用。Type-C&TF Card接口，内部含电池槽&扬声器槽，主控散热片支持&顶板散热孔。    
+
+> Note:如果把亚克力外壳的图纸(.dwg文件)发到淘宝进行生产，某些厂家图纸尺寸单位可能识别成mm，导致外壳大小仅有5.9mm*5.9mm。这时候需要提醒厂家外壳图纸单位为cm，外壳实际尺寸为5.9cm*5.9cm。
 
 关于亚克力外壳组装的说明(**非常重要**):    
 在首次亚克力外壳设计中，采用了12块2mm厚度的亚克力。经过实际组装测试，亚克力高度缺少`2.8mm`,为了成功的组装采用如下方法修补:    
