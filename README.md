@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-07-20 10:27:37
+ * @LastEditTime: 2023-07-20 10:35:34
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -133,7 +133,13 @@ xddcore zero linux board（仅开发板，不含sd卡，外壳，扩展板）
 2. 锂电池尺寸**需小于**`50mm*50mm*8mm`，锂电池接口为`XH2.54`。
 3. F1C200S散热片尺寸**需小于**`10mm*10mm*12mm`。
 
-#### 1.1.5 Type-C拨码开关配置
+#### 1.1.5 Type-C连接方式
+|  连接方式   | 功能  |
+|  ----  | ---- |
+| 正插  | 连接USB(具体取决于拨码开关配置) |
+| 反插  | 连接F1C200S的串口0(USB-TTL)，用于输出串口终端 |
+
+#### 1.1.6 Type-C拨码开关配置
 
 |  功能(1-4Bit)   | 1 Bit  | 2 Bit   |  3 Bit   |  4 Bit   |
 |  ----  | ---- | ---- | ---- | ---- |
