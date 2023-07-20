@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-07-20 10:35:34
+ * @LastEditTime: 2023-07-20 10:36:43
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -37,7 +37,8 @@
       - [1.1.2 扩展板PCB](#112-扩展板pcb)
       - [1.1.3 外壳](#113-外壳)
       - [1.1.4 其他硬件](#114-其他硬件)
-      - [1.1.5 Type-C拨码开关配置](#115-type-c拨码开关配置)
+      - [1.1.5 Type-C连接方式](#115-type-c连接方式)
+      - [1.1.6 Type-C拨码开关配置](#116-type-c拨码开关配置)
     + [1.2 软件](#12-软件)
       - [1.2.1 驱动支持情况:](#121-驱动支持情况)
       - [1.2.2 快速验证](#122-快速验证)
