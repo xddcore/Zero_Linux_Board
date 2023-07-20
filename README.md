@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-07-20 15:35:31
+ * @LastEditTime: 2023-07-20 22:35:17
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -178,7 +178,7 @@ xddcore zero linux board（仅开发板，不含sd卡，外壳，扩展板）
 |     | F1C200S  | RP2040  |
 |  ----  | ---- | ---- |
 | RAM  | 64MB | 264KB |
-| Flash  | 取决于SD卡容量(典型值32GB) | 2MB+16MB |
+| Flash  | 取决于SD卡容量(典型值32GB) | 16MB(SPI Flash) |
 
 
 #### 1.2.1 驱动支持情况:
@@ -1264,9 +1264,34 @@ mount -t vfat /dev/sda1 /media
 wget https://micropython.org/download/rp2-pico/rp2-pico-latest.uf2
 ```
 
-6. 烧录MicroPython至RP2040
+**Bug修复**
+**Bug现象**:重启后固件丢失，以及flash size无法正确返回的问题。     
+**SPI Flash型号**:W25Q128JV      
+**解决办法**:    
+根据数据手册，`Clock frequency for Read Data instruction (03h) fR D.C. 50 MHz`，最大读取数据指令时钟为50Mhz。MicroPython配置的PICO_FLASH_SPI_CLKDIV=4时，时钟约为60Mhz，将会导致SPI Flash无法工作。我们在编译程序时，需要手动降低至40Mhz(添加编译选项 PICO_FLASH_SPI_CLKDIV= 6,BOOT2_S_CFLAGS ?= -DPICO_FLASH_SPI_CLKDIV= 6)。     
+**参考:**
+> https://github.com/adafruit/circuitpython/issues/4377        
+> https://github.com/raspberrypi/pico-sdk/issues/1304 (两种fixup思路)    
+> https://github.com/adafruit/circuitpython/commit/aec03a409f66cdb90e1b51c7ffb827750eadd830    
+
+5. 下载CircuitPython固件
 ```
+wget https://downloads.circuitpython.org/bin/raspberry_pi_pico/en_US/adafruit-circuitpython-raspberry_pi_pico-en_US-8.2.0.uf2
+```
+
+5. Pico-SDK
+```
+https://github.com/raspberrypi/pico-sdk
+```
+> Note: Pico-SDK的SPI Flash时钟部分和MicroPython具有相同Bug，参考上述方法进行修复。
+
+6. 烧录固件至RP2040
+```
+#micropython
 cp /xddcore_toolbox/rp2-pico-latest.uf2 /media/
+
+#circuitpython
+cp /xddcore_toolbox/adafruit-circuitpython-raspberry_pi_pico-en_US-8.2.0.uf2 /media/
 ```
 
 7. 成功烧录后，你将看到如下提示：
@@ -1295,9 +1320,9 @@ minicom -o -D /dev/ttyACM0
 ```
 ![rp2040_micropython](/img/rp2040_micropython.jpeg)
 
-11. 运行如下MicroPython测试代码
+11. 运行如下测试代码
 
->代码作用:Micropython 查看内部FLASH大小
+>代码作用:查看SPI FLASH大小
 ```
 import os
 
@@ -1307,6 +1332,20 @@ flash_size_bytes = stat[0] * stat[2]
 flash_size_MB = flash_size_bytes / (1024 * 1024)
 print('SPI Flash size:', flash_size_MB, 'MB')
 
+```
+返回结果:
+```
+Adafruit CircuitPython 8.2.0 on 2023-07-05; Raspberry Pi Pico with rp2040
+>>> import os
+
+stat = os.statvfs('/')
+flash_size_bytes = stat[0] * stat[2]
+
+flash_size_MB = flash_size_bytes / (1024 * 1024)
+print('SPI Flash size:', flash_size_MB, 'MB')
+
+SPI Flash size: 14.9688 MB
+>>> 
 ```
 
 12. 退出MINICOM
