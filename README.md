@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-07-20 22:35:17
+ * @LastEditTime: 2023-07-20 22:41:31
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -1264,7 +1264,7 @@ mount -t vfat /dev/sda1 /media
 wget https://micropython.org/download/rp2-pico/rp2-pico-latest.uf2
 ```
 
-**Bug修复**
+**Bug修复**    
 **Bug现象**:重启后固件丢失，以及flash size无法正确返回的问题。     
 **SPI Flash型号**:W25Q128JV      
 **解决办法**:    
@@ -1281,7 +1281,7 @@ wget https://downloads.circuitpython.org/bin/raspberry_pi_pico/en_US/adafruit-ci
 
 5. Pico-SDK
 ```
-https://github.com/raspberrypi/pico-sdk
+git clone https://github.com/raspberrypi/pico-sdk
 ```
 > Note: Pico-SDK的SPI Flash时钟部分和MicroPython具有相同Bug，参考上述方法进行修复。
 
@@ -1319,7 +1319,7 @@ apt install minicom
 minicom -o -D /dev/ttyACM0
 ```
 ![rp2040_micropython](/img/rp2040_micropython.jpeg)
-
+![circuitpython](/img/circuitpython.jpg)
 11. 运行如下测试代码
 
 >代码作用:查看SPI FLASH大小
