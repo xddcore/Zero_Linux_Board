@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-07-20 22:41:31
+ * @LastEditTime: 2023-07-21 23:00:07
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -620,6 +620,13 @@ musicbox
 **性能参数:**
 >WIFI速度下载806KB/s,上传729KB/s。以上结果由`speedtest`得出，仅供参考
 ![wifi_speedtest](/img/wifi_speedtest.jpg)
+
+>WIFI稳定性:
+**路由器:**     
+![WIFI_Stability_Router](/img/WIFI_Stability_Router.jpeg)
+**手机热点:**
+![WIFI_Stability_SOFTAP](/img/WIFI_Stability_SOFTAP.jpeg) 
+用来测试的手机比较老了，等后面换一台再试试
 
 1. 拉取代码
 ```
