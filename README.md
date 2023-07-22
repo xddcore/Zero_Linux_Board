@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-07-22 14:59:05
+ * @LastEditTime: 2023-07-22 15:11:16
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -107,7 +107,7 @@ xddcore zero linux board（仅开发板，不含sd卡，外壳，扩展板）
 |  版本号   |说明  |
 |  ----  |---- |
 | V1.0  | 完成初步设计 |
-| V1.1  | 优化布线，引出IO。**Bug预警:已知原油TP5400升压电路10uH 0402电感功率较小，升压时会导致电感烧毁，请替换为额定电流大于1.6A的功率电感。** |
+| V1.1  | 优化布线，引出IO。**Bug预警:已知原有TP5400升压电路10uH 0402电感功率较小，升压时会导致电感烧毁，请替换为额定电流大于1.5A的功率电感(TP5400最高输出1.5A(Vbat=3.8v))。** |
 
 #### 1.1.2 扩展板PCB
 
