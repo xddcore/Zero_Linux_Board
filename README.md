@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-07-22 15:11:16
+ * @LastEditTime: 2023-07-23 10:44:00
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -129,7 +129,7 @@ xddcore zero linux board（仅开发板，不含sd卡，外壳，扩展板）
 在首次亚克力外壳设计中，采用了12块2mm厚度的亚克力。经过实际组装测试，亚克力高度缺少`2.8mm`,为了成功的组装采用如下方法修补:    
 
 >方法一: 使用4颗2.8mm高度的M2防滑螺母垫高处理(M2防滑螺母安装在由下往上数的**第4块**亚克力上方)。效果图如下:    
-![U-Boot](/img/Acrylic_assemble_fixup1.jpeg)
+![Acrylic](/img/Acrylic_assemble_fixup1.jpeg)
 
 
 >方法二: 在生产亚克力时，多生产一块3mm厚度的亚克力。最后共计生产**12块2mm厚度亚克力和1块3mm厚度亚克力**。    
@@ -145,7 +145,8 @@ xddcore zero linux board（仅开发板，不含sd卡，外壳，扩展板）
 
 #### 1.1.4 其他硬件
 1. 4 \*（M2螺丝+M2防滑螺母）。螺丝长度**需大于**`27mm`，M2防滑螺母厚度2.8mm。
-2. 锂电池尺寸**需小于**`50mm*50mm*8mm`，锂电池接口为`XH2.54`。
+2. 锂电池尺寸**需小于**`50mm*50mm*8mm`，锂电池接口为`XH2.54`。锂电池接口极性如下图:
+>![battery](/img/battery.jpeg)
 3. F1C200S散热片尺寸**需小于**`10mm*10mm*12mm`。
 
 #### 1.1.5 Type-C连接方式
