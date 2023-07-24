@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-07-23 10:44:00
+ * @LastEditTime: 2023-07-24 19:37:20
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -113,8 +113,11 @@ xddcore zero linux board（仅开发板，不含sd卡，外壳，扩展板）
 
 |  名称   | 进度  | 说明  |
 |  ----  | ---- | ---- |
-| 小电视扩展板  | 待绘制 | 2.8寸ISP电容触摸屏 |
+| 小电视扩展板  | 已绘制完成，等待测试| 2.8寸ISP电容触摸屏,摄像头，麦克风，自定义按钮，全彩LED |
 | 桌面机器人扩展板  | 已绘制完成，等待测试 | [稚晖君ElectronBot桌面机器人的Linux版本](https://github.com/xddcore/ElectronBot-Linux)|
+
+![BiliBiliTV_Board1](/img/BiliBiliTV_Board1.jpg)
+![BiliBiliTV_Board2](/img/BiliBiliTV_Board2.jpg)
 
 #### 1.1.3 外壳
 
@@ -222,6 +225,8 @@ sudo apt install gcc-arm-linux-gnueabi
 ```
 make xddcore_zero_defconfig
 ```
+>[点我查看性能测试结果](#)     
+
 **超频配置(CPU 408Mhz->720Mhz,DDR 156Mhz -> 240Mhz),测试中**
 ```
 make xddcore_zero_overclock_defconfig
@@ -561,6 +566,34 @@ update-rc.d net.sh defaults 99
 4.如果未来不需要的时候，去除自动运行
 ```
 update-rc.d net.sh remove
+```
+
+#### 1.2.8 系统性能测试
+1.安装sysbench
+```
+wget https://github.com/akopytov/sysbench/archive/refs/tags/1.0.20.tar.gz
+tar -zxvf 1.0.20.tar.gz
+```
+
+2.编译安装
+```
+apt install libtool m4 automake pkg-config
+cd sysbench-1.0.20/
+./autogen.sh
+# Add --with-pgsql to build with PostgreSQL support
+./configure --without-mysql
+make -j
+make install
+```
+
+3.安装完成后，查看sysbench版本
+```
+sysbench --version
+```
+
+4.性能测试
+```
+sysbench cpu --cpu-max-prime=200 run
 ```
 
 ### 1.3 驱动开发
