@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-07-24 20:28:10
+ * @LastEditTime: 2023-07-25 14:02:09
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -113,11 +113,11 @@ xddcore zero linux board（仅开发板，不含sd卡，外壳，扩展板）
 
 |  名称   | 进度  | 说明  |
 |  ----  | ---- | ---- |
-| 小电视扩展板  | 已绘制完成，等待测试| 2.8寸ISP电容触摸屏,摄像头，麦克风，自定义按钮，全彩LED |
+| MINIPC 扩展板  | 已绘制完成，等待测试| 2.8寸ISP电容触摸屏,摄像头，麦克风，自定义按钮，全彩LED |
 | 桌面机器人扩展板  | 已绘制完成，等待测试 | [稚晖君ElectronBot桌面机器人的Linux版本](https://github.com/xddcore/ElectronBot-Linux)|
 
-![BiliBiliTV_Board1](/img/BiliBiliTV_Board1.jpg)
-![BiliBiliTV_Board2](/img/BiliBiliTV_Board2.jpg)
+![MINIPC_Board1](/img/MINIPC_Board1.jpg)
+![MINIPC_Board2](/img/MINIPC_Board2.jpg)
 
 #### 1.1.3 外壳
 
