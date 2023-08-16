@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-07-25 14:02:09
+ * @LastEditTime: 2023-08-16 16:23:56
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -11,9 +11,11 @@
 
 >如果你喜欢此项目，欢迎为本项目点一个Star🌟
 
-**视频介绍**：[【自制】圆梦Linux小电脑](https://www.bilibili.com/video/BV1nN411S7BC)
+**核心板视频介绍**：[【自制】圆梦Linux小电脑](https://www.bilibili.com/video/BV1nN411S7BC)
 
 **开源仓库介绍**：[【自制|开源】小白也可以轻松复现的Linux小电脑](https://www.bilibili.com/video/BV17u411V7ws/)
+
+**透明探索版便携式小电脑**:[【自制】技术宅up耗时两个月，自制掌上触屏小电脑【硬核】【透明探索版】](https://www.bilibili.com/video/BV16h4y1Q7jv/)
 
 ## 介绍
 本项目是xddcore同学在2023年6月2日启动的一个Linux开发板项目。本项目旨在纪念学生时代的结束(从初二至今9年的电子编程折腾生涯)。同时，设计一块板子来满足一些需要Linux生态但是又不需要很强性能的场景。
@@ -60,32 +62,16 @@
 **关于量产拼单活动**     
 xddcore zero Linux开发板软硬件全开源，大家可以选择自行复现。为了响应大家的购买需求，特地开启量产拼单活动。**本次量产拼单旨在集合大家的生产需求来拼单生产。这将显著显著降低大家制作开发板的成本，节约制作时间，并避免自行焊接带来问题。**
 
+**活动记录**
+230806：已成功拼单45块`Zero Linux Board`核心板，并全部成功交付。
+230817: 第二批量产拼单活动筹备进行中。本次将会拼单掌上小电脑套件(含核心板)。
+
 **活动参与方式**     
-扫描二维码，填写接龙信息，请注意，一定要填写QQ号，后期定金收款将会直接定向到QQ号。然后添加QQ群481227232。
 
-**接龙二维码**    
-![接龙二维码](/img/smt_group.jpeg)
-
-**拼单内容**：    
-xddcore zero linux board（仅开发板，不含sd卡，外壳，扩展板）
-
-**预计最终每块板子成本**    
-200元以内。
-
-**参与方式**：    
-第零步，扫描二维码，填写接龙信息，请注意，一定要填写QQ号，后期定金收款将会直接定向到QQ号。然后添加QQ群481227232。   
-
-第一步，拼单人数达到阈值后，将发起群收款，支付定金100元，提供个人联系方式。参与量产拼单。    
-
-第二步，根据参与人数，确认最终尾款。（注：若参与人数较少，将导致每套开发板价格非常高，所以视为拼单失败，定金返还。｜参与的人数越多，每套开发板的价格将会越便宜） 
-
-第三步，等待开发板进行生产测试。（若进行到此步骤，则定金不退）
-
-第四步，支付尾款，填写收货地址。    
-
-第五步，拿到开发板。    
+添加QQ群481227232，并填写支付问卷。
 
 ---
+
 ## 0. 目录结构
 
 1. Hardware: 所有硬件相关资料
@@ -108,16 +94,16 @@ xddcore zero linux board（仅开发板，不含sd卡，外壳，扩展板）
 |  ----  |---- |
 | V1.0  | 完成初步设计 |
 | V1.1  | 优化布线，引出IO。**Bug预警:已知原有TP5400升压电路10uH 0402电感功率较小，升压时会导致电感烧毁，请替换为额定电流大于1.5A的功率电感(TP5400最高输出1.5A(Vbat=3.8v))。** |
+| V1.1-量产版本  | 优化布线，修复Bug。已稳定生产。 |
 
 #### 1.1.2 扩展板PCB
 
 |  名称   | 进度  | 说明  |
 |  ----  | ---- | ---- |
-| MINIPC 扩展板  | 已绘制完成，等待测试| 2.8寸ISP电容触摸屏,摄像头，麦克风，自定义按钮，全彩LED |
+| MINIPC 扩展板  | 已成功发布| 2.8寸ISP电容触摸屏,摄像头，麦克风，自定义按钮，全彩LED |
 | 桌面机器人扩展板  | 已绘制完成，等待测试 | [稚晖君ElectronBot桌面机器人的Linux版本](https://github.com/xddcore/ElectronBot-Linux)|
 
-![MINIPC_Board1](/img/MINIPC_Board1.jpg)
-![MINIPC_Board2](/img/MINIPC_Board2.jpg)
+![MINI_PC.JPG](/img/MINI_PC.JPG)
 
 #### 1.1.3 外壳
 
@@ -144,18 +130,19 @@ xddcore zero linux board（仅开发板，不含sd卡，外壳，扩展板）
 
 ##### 3D打印外壳
 
-1. 小电视外壳:内带2.8寸ISP电容触摸屏，麦克风，iphone扬声器等，可玩性极高。
+1. MINI PC外壳:尺寸`90mm` \* `70mm` \* `34mm`。内置2.8寸ISP电容触摸屏，麦克风，iphone扬声器等，可玩性极高。
 
-**小电视外壳螺丝要求(以下要求为极限值，实际中请取中值):**
-1. 2 \* M3螺丝长度**小于**`16.1mm`，**大于**`12.1mm`。
-2. 2 \* M3螺丝长度**小于**`29.1mm`，**大于**`25.1mm`。
-3. 2 \* M2螺丝长度**小于**`4mm`，**大于**`2mm`。
+**MINI PC外壳螺丝要求:**
+1. 2 \* M3螺丝长度**小于**`16.1mm`，**大于**`12.1mm`。**经实际测试，推荐`16mm`**
+2. 2 \* M3螺丝长度**小于**`29.1mm`，**大于**`25.1mm`。**经实际测试，推荐`29mm`**
+3. 2 \* M2螺丝长度**小于**`4mm`，**大于**`2mm`。**经实际测试，推荐`4mm`**
+
 
 #### 1.1.4 其他硬件
 1. 4 \*（M2螺丝+M2防滑螺母）。螺丝长度**需大于**`27mm`，M2防滑螺母厚度2.8mm。
 2. 锂电池尺寸**需小于**`50mm*50mm*8mm`，锂电池接口为`XH2.54`。锂电池接口极性如下图:
 >![battery](/img/battery.jpeg)
-3. F1C200S散热片尺寸**需小于**`10mm*10mm*12mm`。
+3. `F1C200S`和`ESP8266EX`散热片尺寸**需小于**`10mm*10mm*12mm`。
 
 #### 1.1.5 Type-C连接方式
 |  连接方式   | 功能  |
@@ -199,9 +186,9 @@ xddcore zero linux board（仅开发板，不含sd卡，外壳，扩展板）
 | 视频硬解码  | ❌(开发中) |
 | 音频codec  | ✅ |
 | MPU6050(IIO Device)  | ✅ |
-| 2.8寸ISP电容触摸屏  | ❌(测试中) |
+| 2.8寸ISP电容触摸屏  | ✅  |
 | USB OTG/Host/Device   | ✅ |
-| USB HUB(键盘，U盘)  | ✅ |
+| USB HUB(键盘，U盘,摄像头)  | ✅ |
 | F1C200S与RP2040的UART CDC通信；控制RP2040进入DFU模式，并对RP2040编程  | ✅ |
 
 #### 1.2.2 快速验证
@@ -210,6 +197,7 @@ xddcore zero linux board（仅开发板，不含sd卡，外壳，扩展板）
 |   镜像名称  | 下载链接  | 
 |  ----  | ---- | 
 | xddcore_zero_debian_v5.10.186_230715.img.gz  |  [点我查看](https://github.com/xddcore/Zero_Linux_Board/releases/tag/Debian_v5.10.186_230715) |
+| xddcore_zero_debian_v5.10.186_230810_Tiny.img(**最新**)  |  [点我查看](https://github.com/xddcore/Zero_Linux_Board/releases/tag/Debian_v5.10.186_230810) |
 
 开发板工具包路径(相关软件会放置在里面)：
 > /xddcore_toolbox
@@ -1261,9 +1249,110 @@ gcc -o mpu6050_game mpu6050_game.c -lm
 ./mpu6050_game
 ```
 
-#### 1.3.4 2.8寸ISP电容触摸屏驱动➕LVGL
+#### 1.3.4 2.8寸ISP电容触摸屏驱动&LVGL
 
->测试中
+0. 下载交叉编译工具链
+```
+#!/bin/sh
+
+HOST=arm-linux-gnueabi
+SCRIPT_PATH=$(pwd)
+
+#修改源码包解压后的名称
+MAJOR_NAME=gcc-arm-linux-gnueabi
+
+#修改需要下载的源码版本前缀和后缀
+OPENSRC_VER_PREFIX=7.2
+OPENSRC_VER_SUFFIX=.1
+
+PACKAGE_NAME=${MAJOR_NAME}-${OPENSRC_VER_PREFIX}${OPENSRC_VER_SUFFIX}
+
+#定义压缩包名称
+COMPRESS_PACKAGE=gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi.tar.xz
+
+#定义编译后安装--生成的文件,文件夹位置路径
+INSTALL_PATH=/opt/${PACKAGE_NAME}
+
+#无需修改--下载地址
+DOWNLOAD_LINK=https://releases.linaro.org/components/toolchain/binaries/7.2-2017.11/arm-linux-gnueabi/${COMPRESS_PACKAGE}
+
+#下载源码包
+do_download_src () {
+   echo "start download ${COMPRESS_PACKAGE}..."
+   if [ ! -f "${COMPRESS_PACKAGE}" ];then
+      if [ ! -d "${PACKAGE_NAME}" ];then
+        wget -c ${DOWNLOAD_LINK}
+      fi
+   fi
+   echo "\033[1;33mdone...\033[0m"
+}
+
+#解压源码包
+do_tar_package () {
+   echo "start unpacking the ${PACKAGE_NAME} package ..."
+
+   mkdir -p ${INSTALL_PATH}
+
+   if [ ! -d "${PACKAGE_NAME}" ];then
+      tar -xf ${COMPRESS_PACKAGE} -C ${INSTALL_PATH} --strip-components=1
+   fi
+   echo "done..."
+}
+
+#删除下载的文件
+do_delete_file () {
+   cd ${SCRIPT_PATH}
+   if [ -f "${PACKAGE_NAME}" ];then
+      sudo rm -f ${PACKAGE_NAME}
+   fi
+}
+
+do_download_src
+do_tar_package
+# do_delete_file
+
+exit $?
+```
+
+1. 拉取源码
+**所有控件展示的demo**
+```
+git clone https://github.com/xddcore/lv_port_linux_frame_buffer -b zero-lvgl
+```
+**心率，血压demo**
+```
+git clone https://github.com/xddcore/lv_port_linux_frame_buffer -b zero_lvgl_heartrate
+```
+2. 拉取子模块
+```
+cd lv_port_linux_frame_buffer/
+git submodule update --init --recursive
+```
+
+3. 生成Makefile，然后编译源码
+```
+#ls看一下，如有/build，则请先执行rm -rf build/
+mkdir build
+cd build
+cmake ..
+make
+```
+
+4. 运行
+```
+./lvgl_fb
+```
+
+一些优化体验的指令
+```
+echo -e "\033[?25l" > /dev/tty1 #关闭光标
+echo -e "\033[?25h" > /dev/tty1 #开启光标
+```
+
+
+
+
+
 
 #### 1.3.5 树莓派RP2040 USB驱动
 
@@ -1302,6 +1391,7 @@ fdisk -l
 
 4. 挂载RP2040
 ```
+#此处根据实际情况修改可能为sda1或sdb1
 mount -t vfat /dev/sda1 /media
 ```
 
@@ -1410,6 +1500,18 @@ sleep 1
 echo 136 > /sys/class/gpio/unexport
 ```
 
+14. 操作RP2040进入DFU模式
+```
+echo 136 > /sys/class/gpio/export
+echo 135 > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio136/direction
+echo out > /sys/class/gpio/gpio135/direction
+echo 1 > /sys/class/gpio/gpio136/value
+echo 1 > /sys/class/gpio/gpio135/value
+echo 136 > /sys/class/gpio/unexport
+echo 135 > /sys/class/gpio/unexport
+```
+
 #### 1.3.6 语音识别与交互驱动
 支线:服务器端部署chatGLM2
 
@@ -1420,8 +1522,388 @@ git clone https://github.com/espeak-ng/espeak-ng.git
 Bug fixed:
 替换/usr/lib/xxxx-gnu/espeak-data目录下的内容
 
-   
-## 1.4 一些图片
+
+
+### 1.4 玩法
+
+> 以下所有DEMO，若运行报错，可尝试git pull拉取最新代码。
+
+#### 1.4.1 在ISP屏幕上显示系统信息
+```
+neofetch --off > /dev/tty1
+```
+
+
+#### 1.4.2 在ISP屏幕上显示图片
+1. 安装`fbi`
+```
+apt install fbi
+```
+2. 显示图片
+>这里，-a：这个选项会让 fbi 自动缩放图像，使其适应屏幕的大小。 -noverbose：这个选项告诉 fbi 在启动时不要显示任何冗长的信息或警告。 -d /dev/fb0 指定了帧缓冲设备，-T 1 指定了使用哪个虚拟终端，image.jpg 是要显示的图像的路径。
+```
+fbi -a -noverbose -d /dev/fb0 -T 1 image.jpg
+```
+如果要关闭可以键盘`esc`或`q`，或者直接杀死进程。       .
+3.使用`ffmpeg`显示图片
+```
+#demo1(无缩放)
+ffmpeg -i input.jpg -c:v rawvideo -pix_fmt rgb565le -f fbdev /dev/fb0
+
+#demo2(自动缩放)
+ffmpeg -i ../ILSVRC2012_val_00000003.JPEG -vf "scale='min(320,iw)':'min(240,ih)'" -c:v rawvideo -pix_fmt rgb565le -f fbdev /dev/fb0
+```
+
+
+#### 1.4.3 在ISP屏幕上视频播放
+
+```
+ffmpeg -re -i video2_h264.mp4 -c:v rawvideo -pix_fmt rgb565le -f fbdev /dev/fb0
+```
+
+#### 1.4.3 USB摄像头
+>注意，由于F1C200S USB EndPoint不足，所以无法驱动USB摄像头。
+1. 查看摄像头支持的输出格式
+```
+v4l2-ctl --list-formats
+v4l2-ctl --list-formats-ext
+```
+```
+root@xddcore-zero:/xddcore_toolbox/v4l2_cameara# v4l2-ctl --list-formats
+ioctl: VIDIOC_ENUM_FMT
+        Type: Video Capture
+
+        [0]: 'MJPG' (Motion-JPEG, compressed)
+        [1]: 'YUYV' (YUYV 4:2:2)
+```
+2. 捕获图像
+```
+fswebcam -d /dev/video0 -r 320x240 test.jpeg
+ffmpeg -f v4l2 -s 640x480 -i /dev/video0 output.jpg
+```
+
+#### 1.4.3 本地音乐播放
+```
+mplayer xxx.mp3
+
+或
+
+aplayer xxx.mp3
+```
+
+#### 1.4.4 网易云音乐播放音乐播放
+```
+musicbox
+```
+
+#### 1.4.5 6轴陀螺仪
+```
+#demo1
+/xddcore_toolbox/mpu6050
+
+#demo2
+/xddcore_toolbox/mpu6050_game
+```
+
+#### 1.4.6 LVGL
+```
+#demo1
+/xddcore_toolbox/zero_lvgl_port/demo/lvgl_fb_example
+
+#demo2
+/xddcore_toolbox/zero_lvgl_port/demo/lvgl_fb_heartrate
+```
+
+#### 1.4.7 RP2040编程
+
+见上述RP2040驱动章节
+
+需要注意:在发布镜像中，由于F1C200S USB Endpoint不足，且开启了USB HID设备，并且USB HUB会占用一定的EndPoint。所以(以Circuit Python为例):
+
+1. **如果要对RP2040的disk进行操作，改写Code.py文件。**则需要将拨码开关配置为`1010 1010`（越过USB Hub进行通信）。
+2. **如果要对RP2040的disk进行操作，且需要依赖USB串口的交互模式。**则需要在Linux Kernel Menuconfig中关闭USB HID驱动(或将USB HID驱动编译为模块)后，自行编译内核。
+3. **如果要对RP2040的disk进行操作，且需要依赖USB串口的交互模式，且想快速完成rp2040编程的话。**则需要将拨码开关配置为`0101 1010`（F1C200S连接板载USB Hub，RP2040通过Type-C连接电脑）。
+
+#### 1.4.8 智能助手(Chatgpt-3.5)
+1. 编辑文件，并填入自己的OPENAI API密钥 
+```
+vim /xddcore_toolbox/Hello-Pinecone/Hello-Pinecone.py
+```
+2. 运行DEMO
+```
+python3 /xddcore_toolbox/Hello-Pinecone/Hello-Pinecone.py
+```
+
+#### 1.4.9 登陆月球模拟器
+详情见https://github.com/xddcore/TinyLander-Linux-fb
+
+运行DEMO:
+```
+/xddcore_toolbox/TinyLander-Linux-fb/TinyLander
+```
+
+> 如遇屏幕闪烁，请git pull重新拉取最新代码后，重新编译运行。
+
+
+#### 1.4.10 NES模拟器
+>游戏ROM下载地址:https://www.emulatorgames.net/roms/nintendo/
+
+1. 安装依赖
+```
+apt install alsa-utils
+apt install libasound2-dev
+apt install zlib1g-dev
+```
+
+2. 拉取InfoNES源码
+```
+git clone https://github.com/xddcore/arm-NES-linux.git -b zero-InfoNES
+```
+
+3. 编译
+```
+cd arm-NES-linux/linux
+make
+```
+
+>测试游戏包下载:https://github.com/xddcore/arm-NES-linux/releases/tag/NES_Game_Pack
+
+4. 下载测试游戏
+```
+wget https://github.com/xddcore/arm-NES-linux/releases/download/NES_Test_Game/Super_Mario_Bros_3.nes
+```
+
+5. 运行游戏
+```
+/xddcore_toolbox/arm-NES-linux/linux/InfoNES ./Super_Mario_Bros_3.nes
+```
+
+
+#### 1.4.11 OpenNNA2.0神经网络框架
+
+1.拉取源码
+```
+git clone https://github.com/xddcore/OpenNNA2.0.git
+```
+
+2.编译
+```
+cd OpenNNA2.0/platform/zero_linux_board/
+#ls看一下，如有/build，则请先执行rm -rf build/
+mkdir build
+cd build
+cmake ..
+make
+```
+
+3.运行
+```
+#结果显示在cmd
+ffmpeg -i ../ILSVRC2012_val_00000003.JPEG -vf "scale=w=320:h=240" -c:v rawvideo -pix_fmt rgb565le -f fbdev /dev/fb0
+./core
+#结果显示在isp屏幕
+ffmpeg -i ../ILSVRC2012_val_00000003.JPEG -vf "scale=w=320:h=240" -c:v rawvideo -pix_fmt rgb565le -f fbdev /dev/fb0
+./core > /dev/tty1
+```
+
+#### 1.4.12 搭建个人博客(Typecho)
+
+运行博客四件套(Nginx+php+SQlite3+typecho+rathole)，怎么轻量化怎么来
+
+1. **安装nginx**
+```
+apt install nginx
+```
+
+此步骤后会遇到报错```Nginx Error: [::1]:80 failed: Address family not supported by protocol [Solved]```
+
+原因及解决方法:
+```
+ 该错误消息表明该服务正在尝试在 IPv6 地址“ [::]:80 ”上启动，但由于地址系列不受支持而失败。这意味着该机器没有设置 IPv6 地址。您需要做的就是简单地编辑 Ngnix 配置文件来监听 IPv4 地址，如下所示。
+```
+1. 打开/etc/nginx/sites-enabled/default
+```
+vim /etc/nginx/sites-enabled/default
+```
+
+2. 注释以下行：
+```
+listen [::]:80 default_server;
+```
+
+3. 重新运行安装
+```
+apt install nginx
+```
+
+4. 检查nginx运行状态
+```
+systemctl status nginx
+```
+
+5. 浏览器输入IP地址，再次检查Nginx是否运行正常
+
+
+2. **安装PHP(内含mysql，sqlite等插件)**
+```
+apt install php7.3-cli php7.3-fpm php7.3-curl php7.3-mysql php7.3-gd php7.3-xml php7.3-mbstring php-sqlite3
+```
+
+3. **安装SQlite3**
+```
+apt install sqlite3 php-sqlite3
+```
+
+4. **修改/etc/nginx/sites-enabled/default(如下图)**
+```
+vim /etc/nginx/sites-enabled/default
+```
+![Nginx配置修改](/img/nginx.jpg)
+5. **重启nginx**
+```
+service nginx restart
+```
+
+6. **下载`Typecho`(地址:https://typecho.org/download)**
+```
+cd /var/www/html/
+wget https://github.com/typecho/typecho/releases/latest/download/typecho.zip
+unzip typecho.zip
+rm typecho.zip
+```
+
+7. **将上传目录修改为可写入**
+```
+pwd=/var/www/html
+chmod -R 777 ./
+```
+
+8. **访问开发板的IP地址**
+```
+ifconfig
+```
+
+9. **按照提示安装Typecho**
+注意:数据库驱动请选择 pdo sqlite驱动        
+后台:http://开发板IP地址/admin/      
+
+
+10. Enjoy it!
+
+#### 1.4.12 内网穿透(Rathole)
+对于没有公网IP的场景，我们还需要一个内网穿透软件。最终选择`Rathole`(相比frpc`70MB`的内存占用来说，Rathole的内存占用仅`10MB`左右，非常适合部署在zero linux board中)。       
+
+Rathole基于rust开发，官方并没有提供基于armv5tejl的二进制构建文件。所以我们需要手动交叉编译。(万幸，armv5tejl在rust的第二层支持列表中)            
+
+所有服务运行起来后的系统资源信息:
+![Typeho+Rathole资源占用](/img/Blog_Rathole_resouce.jpeg)
+
+**以下为在交叉编译环境中的操作**
+1. 安装rust
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+2. 安装交叉编译工具链
+```
+sudo apt-get install -qq gcc-arm-linux-gnueabi
+sudo apt-get install gcc-arm-linux-gnueabi libc6-armel-cross libc6-dev-armel-cross
+ sudo apt install pkg-config
+ sudo apt install libssl-dev
+ sudo apt-get install libudev-dev
+ sudo apt install librust-openssl-sys-dev
+ sudo apt install perl
+
+export OPENSSL_DIR="usr/lib/ssl"
+export OPENSSL_INCLUDE_DIR="/usr/include/openssl"
+export OPENSSL_LIB_DIR="/usr/lib/x86_64-linux-gnu"
+```
+3. 添加目标
+
+```
+rustup target add armv5te-unknown-linux-gnueabi​​
+
+```
+
+4. 配置cargo
+```
+$ mkdir -p ~/.cargo
+$ vim ~/.cargo/config
+#添加以下内容:
+[target.armv5te-unknown-linux-gnueabi​​]
+linker = "arm-linux-gnueabi-gcc"
+
+```
+5. 拉取rathole源码
+```
+git clone https://github.com/rapiz1/rathole.git
+cd rathole/
+git checkout tags/v0.4.8
+```
+6. 编译源码
+```
+cargo build --release --target armv5te-unknown-linux-gnueabi \
+  --no-default-features --features noise,client,server,hot-reload \
+  --config target.armv5te-unknown-linux-gnueabi.linker=\"rust-lld\"
+
+  cargo build --release --target armv5te-unknown-linux-gnueabi \
+  --no-default-features --features noise,client,server,hot-reload \
+  --config target.armv5te-unknown-linux-gnueabi.linker=\"arm-linux-gnueabi-gcc\"
+```
+
+7. 编译好的二进制文件在`rathole/target/armv5te-unknown-linux-gnueabi/release`目录下
+
+
+
+**服务器部署**
+1. 下载构建好的二进制文件
+```
+wget https://github.com/rapiz1/rathole/releases/download/v0.4.8/rathole-x86_64-unknown-linux-gnu.zip
+```
+2. 创建并编辑配置文件
+```
+vim server.toml
+
+#填入以下内容
+# server.toml
+[server]
+bind_addr = "0.0.0.0:2333" # `2333` 配置了服务端监听客户端连接的端口
+[server.services.my_blog]
+token = "123456" # 用于验证的 token
+bind_addr = "0.0.0.0:80" # `5202` 配置了将 `my_blog` 暴露给互联网的端口
+```
+3. 运行rothole
+```
+./rothole server.toml
+```
+
+**客户端部署(即Zero Linux Board)**
+1. 下载构建好的二进制文件
+```
+wget https://github.com/xddcore/Zero_Linux_Board/releases/download/Rathole_Armv5tejl/rathole
+```
+2. 创建并编辑配置文件
+```
+vim client.toml
+
+#填入以下内容
+# client.toml
+[client]
+remote_addr = "myserver.com:2333" # 服务器的地址。端口必须与 `server.bind_addr` 中的端口相同。
+[client.services.my_nas_ssh]
+token = "use_a_secret_that_only_you_know" # 必须与服务器相同以通过验证
+local_addr = "127.0.0.1:22" # 需要被转发的服务的地址
+```
+3. 运行rothole
+```
+./rothole client.toml
+```
+
+
+
+
+
+## 1.5 一些图片
 ![PCB_v10](/img/PCB_v10.JPG)
 ![Front_Board_Basic_Shell_2](/img/Front_Board_Basic_Shell_2.jpg)
 ![board1](/img/board1.JPG)
