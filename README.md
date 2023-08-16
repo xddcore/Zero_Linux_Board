@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-08-16 16:23:56
+ * @LastEditTime: 2023-08-16 16:26:45
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -59,7 +59,7 @@
   * [1.4 一些图片](#14-一些图片)
 
 ---
-**关于量产拼单活动**     
+## 关于量产拼单活动
 xddcore zero Linux开发板软硬件全开源，大家可以选择自行复现。为了响应大家的购买需求，特地开启量产拼单活动。**本次量产拼单旨在集合大家的生产需求来拼单生产。这将显著显著降低大家制作开发板的成本，节约制作时间，并避免自行焊接带来问题。**
 
 **活动记录**
@@ -1561,7 +1561,7 @@ ffmpeg -i ../ILSVRC2012_val_00000003.JPEG -vf "scale='min(320,iw)':'min(240,ih)'
 ffmpeg -re -i video2_h264.mp4 -c:v rawvideo -pix_fmt rgb565le -f fbdev /dev/fb0
 ```
 
-#### 1.4.3 USB摄像头
+#### 1.4.4 USB摄像头
 >注意，由于F1C200S USB EndPoint不足，所以无法驱动USB摄像头。
 1. 查看摄像头支持的输出格式
 ```
@@ -1582,7 +1582,7 @@ fswebcam -d /dev/video0 -r 320x240 test.jpeg
 ffmpeg -f v4l2 -s 640x480 -i /dev/video0 output.jpg
 ```
 
-#### 1.4.3 本地音乐播放
+#### 1.4.5 本地音乐播放
 ```
 mplayer xxx.mp3
 
@@ -1591,12 +1591,12 @@ mplayer xxx.mp3
 aplayer xxx.mp3
 ```
 
-#### 1.4.4 网易云音乐播放音乐播放
+#### 1.4.6 网易云音乐播放音乐播放
 ```
 musicbox
 ```
 
-#### 1.4.5 6轴陀螺仪
+#### 1.4.7 6轴陀螺仪
 ```
 #demo1
 /xddcore_toolbox/mpu6050
@@ -1605,7 +1605,7 @@ musicbox
 /xddcore_toolbox/mpu6050_game
 ```
 
-#### 1.4.6 LVGL
+#### 1.4.8 LVGL
 ```
 #demo1
 /xddcore_toolbox/zero_lvgl_port/demo/lvgl_fb_example
@@ -1614,7 +1614,7 @@ musicbox
 /xddcore_toolbox/zero_lvgl_port/demo/lvgl_fb_heartrate
 ```
 
-#### 1.4.7 RP2040编程
+#### 1.4.9 RP2040编程
 
 见上述RP2040驱动章节
 
@@ -1624,7 +1624,7 @@ musicbox
 2. **如果要对RP2040的disk进行操作，且需要依赖USB串口的交互模式。**则需要在Linux Kernel Menuconfig中关闭USB HID驱动(或将USB HID驱动编译为模块)后，自行编译内核。
 3. **如果要对RP2040的disk进行操作，且需要依赖USB串口的交互模式，且想快速完成rp2040编程的话。**则需要将拨码开关配置为`0101 1010`（F1C200S连接板载USB Hub，RP2040通过Type-C连接电脑）。
 
-#### 1.4.8 智能助手(Chatgpt-3.5)
+#### 1.4.10 智能助手(Chatgpt-3.5)
 1. 编辑文件，并填入自己的OPENAI API密钥 
 ```
 vim /xddcore_toolbox/Hello-Pinecone/Hello-Pinecone.py
@@ -1634,7 +1634,7 @@ vim /xddcore_toolbox/Hello-Pinecone/Hello-Pinecone.py
 python3 /xddcore_toolbox/Hello-Pinecone/Hello-Pinecone.py
 ```
 
-#### 1.4.9 登陆月球模拟器
+#### 1.4.11 登陆月球模拟器
 详情见https://github.com/xddcore/TinyLander-Linux-fb
 
 运行DEMO:
@@ -1645,7 +1645,7 @@ python3 /xddcore_toolbox/Hello-Pinecone/Hello-Pinecone.py
 > 如遇屏幕闪烁，请git pull重新拉取最新代码后，重新编译运行。
 
 
-#### 1.4.10 NES模拟器
+#### 1.4.12 NES模拟器
 >游戏ROM下载地址:https://www.emulatorgames.net/roms/nintendo/
 
 1. 安装依赖
@@ -1679,7 +1679,7 @@ wget https://github.com/xddcore/arm-NES-linux/releases/download/NES_Test_Game/Su
 ```
 
 
-#### 1.4.11 OpenNNA2.0神经网络框架
+#### 1.4.13 OpenNNA2.0神经网络框架
 
 1.拉取源码
 ```
@@ -1706,7 +1706,7 @@ ffmpeg -i ../ILSVRC2012_val_00000003.JPEG -vf "scale=w=320:h=240" -c:v rawvideo 
 ./core > /dev/tty1
 ```
 
-#### 1.4.12 搭建个人博客(Typecho)
+#### 1.4.14 搭建个人博客(Typecho)
 
 运行博客四件套(Nginx+php+SQlite3+typecho+rathole)，怎么轻量化怎么来
 
@@ -1790,7 +1790,7 @@ ifconfig
 
 10. Enjoy it!
 
-#### 1.4.12 内网穿透(Rathole)
+#### 1.4.15 内网穿透(Rathole)
 对于没有公网IP的场景，我们还需要一个内网穿透软件。最终选择`Rathole`(相比frpc`70MB`的内存占用来说，Rathole的内存占用仅`10MB`左右，非常适合部署在zero linux board中)。       
 
 Rathole基于rust开发，官方并没有提供基于armv5tejl的二进制构建文件。所以我们需要手动交叉编译。(万幸，armv5tejl在rust的第二层支持列表中)            
