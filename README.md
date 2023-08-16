@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-08-16 16:37:19
+ * @LastEditTime: 2023-08-16 16:57:23
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -77,11 +77,11 @@
 
 ---
 ## 关于量产拼单活动
-xddcore zero Linux开发板软硬件全开源，大家可以选择自行复现。为了响应大家的购买需求，特地开启量产拼单活动。**本次量产拼单旨在集合大家的生产需求来拼单生产。这将显著显著降低大家制作开发板的成本，节约制作时间，并避免自行焊接带来问题。**
+xddcore zero Linux开发板软硬件全开源，大家可以选择自行复现。为了响应大家的购买需求，特地开启量产拼单活动。**本次量产拼单旨在集合大家的生产需求来拼单生产。这将显著显著降低大家制作开发板的成本，节约制作时间，并避免自行焊接带来问题。**      
 
-**活动记录**
-230806：已成功拼单45块`Zero Linux Board`核心板，并全部成功交付。
-230817: 第二批量产拼单活动筹备进行中。本次将会拼单掌上小电脑套件(含核心板)。
+**活动记录**      
+230806：已成功拼单45块`Zero Linux Board`核心板，并全部成功交付。     
+230817: 第二批量产拼单活动筹备进行中。本次将会拼单掌上小电脑套件(含核心板)。        
 
 **活动参与方式**     
 
@@ -1633,9 +1633,9 @@ musicbox
 
 需要注意:在发布镜像中，由于F1C200S USB Endpoint不足，且开启了USB HID设备，并且USB HUB会占用一定的EndPoint。所以(以Circuit Python为例):
 
-1. **如果要对RP2040的disk进行操作，改写Code.py文件。**则需要将拨码开关配置为`1010 1010`（越过USB Hub进行通信）。
-2. **如果要对RP2040的disk进行操作，且需要依赖USB串口的交互模式。**则需要在Linux Kernel Menuconfig中关闭USB HID驱动(或将USB HID驱动编译为模块)后，自行编译内核。
-3. **如果要对RP2040的disk进行操作，且需要依赖USB串口的交互模式，且想快速完成rp2040编程的话。**则需要将拨码开关配置为`0101 1010`（F1C200S连接板载USB Hub，RP2040通过Type-C连接电脑）。
+1. `如果要对RP2040的disk进行操作，改写Code.py文件。`则需要将拨码开关配置为`1010 1010`（越过USB Hub进行通信）。
+2. `如果要对RP2040的disk进行操作，且需要依赖USB串口的交互模式。`则需要在Linux Kernel Menuconfig中关闭USB HID驱动(或将USB HID驱动编译为模块)后，自行编译内核。
+3. `如果要对RP2040的disk进行操作，且需要依赖USB串口的交互模式，且想快速完成rp2040编程的话。`则需要将拨码开关配置为`0101 1010`（F1C200S连接板载USB Hub，RP2040通过Type-C连接电脑）。
 
 #### 1.4.10 智能助手(Chatgpt-3.5)
 1. 编辑文件，并填入自己的OPENAI API密钥 
