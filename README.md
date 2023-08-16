@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-08-16 16:57:23
+ * @LastEditTime: 2023-08-16 17:07:53
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -1596,6 +1596,14 @@ ffmpeg -f v4l2 -s 640x480 -i /dev/video0 output.jpg
 ```
 
 #### 1.4.5 本地音乐播放
+
+**音频播放请先通过以下命令打开运放**:
+```
+echo 138 > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio138/direction
+echo 1 > /sys/class/gpio/gpio138/value
+echo 138 > /sys/class/gpio/unexport
+```
 ```
 mplayer xxx.mp3
 
