@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-08-16 16:26:45
+ * @LastEditTime: 2023-08-16 16:28:22
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -32,6 +32,7 @@
 - [Zero Linux Board - 一个Linux小电脑。](#)
   * [介绍](#介绍)
   * [特性](#特性)
+  * [关于量产拼单活动](#关于量产拼单活动)
   * [目录结构](#0-目录结构)
   * [复现指南](#1-复现指南)
     + [1.1 硬件](#11-硬件)
@@ -1513,14 +1514,10 @@ echo 135 > /sys/class/gpio/unexport
 ```
 
 #### 1.3.6 语音识别与交互驱动
-支线:服务器端部署chatGLM2
-
-离线文字转语音espeak（有人维护的版本espeak-ng）
+离线文字转语音espeak
 ```
-git clone https://github.com/espeak-ng/espeak-ng.git
+apt install espeak
 ```
-Bug fixed:
-替换/usr/lib/xxxx-gnu/espeak-data目录下的内容
 
 
 
