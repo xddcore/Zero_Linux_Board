@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-06-09 21:19:34
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-08-16 17:07:53
+ * @LastEditTime: 2023-08-31 16:49:50
  * @FilePath: /Zero_Linux_Board/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -237,7 +237,7 @@ make xddcore_zero_defconfig
 ```
 >[点我查看性能测试结果](#)     
 
-**超频配置(CPU 408Mhz->720Mhz,DDR 156Mhz -> 240Mhz),测试中**
+**超频配置(CPU 408Mhz->720Mhz,DDR 156Mhz)** [点我查看超频配置](https://github.com/xddcore/Zero_Linux_Board/releases/tag/U-Boot_OverClock) 
 ```
 make xddcore_zero_overclock_defconfig
 ```
